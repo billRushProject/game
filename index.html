@@ -4,9 +4,141 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AllInGame</title>
 </head>
+<style>
+
+    body{
+        padding:0px ;
+        margin: 0px;
+        height: 100vh;
+        font-size: 22px;
+        font-family: "Hiragino Kaku Gothic Pro","Meiryo","MS Pgothic",knowledge-reg,helvetica,arial,sans-serif;}
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    nav{
+        height: 80px;
+        display: flex;
+        justify-content: space-around; 
+    }
+    navItem{
+        color: white;
+        height: 20px;
+        margin: auto 0px auto 0;
+        padding: 10px 8px;
+    }
+    navItem:hover{
+        border: 1px solid white;
+        background-color: #08251d;
+        color: white;
+
+    }
+    .bg{
+        background-image: url("img/bg.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    content{
+        max-width: 1200px;
+        margin: 0px auto 0px auto;
+        /*  grid*/
+        display: grid;
+        grid-template-columns: repeat(4,1fr) ;
+        grid-column-gap: 2em;
+        grid-row-gap: 2.5em;
+    }
+    cell{
+        height: 250px;
+        width: 250px;
+        margin: 10px auto 10px auto;
+        display: inline-block;
+        border-radius: 3px;
+        box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.6), inset 0px 0px 20px 2px rgba(0,0,0,0.4), inset 0px 0px 5px 1px rgba(255,255,255,0.6), inset 0px 0px 0px 1px rgba(255,255,255,0.2);
+    }
+    .album-art {
+	    background-image: url("img/bg.jpg");
+        background-size: 100% 100%;
+        height: 240px;
+        width: 240px;
+        margin:5px 5px;
+    }
+/*
+Green
+08251d
+Red
+ba9259
+*/
+</style>
 <body>
-    
+    <div class="bg container">
+        <nav>
+            <navItem>No filter</navItem>  
+            <navItem>Poker card</navItem>  
+            <navItem>Dice</navItem>
+        </nav>
+        <content>
+            <cell>
+                <img class="album-art" src="img/never2.png" alt="">
+                
+            </cell>
+            <cell>
+                <img class="album-art" src="img/firstImpression2.png" alt="">
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+            <cell>
+            </cell>
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+        <cell>
+        </cell>
+    </cell>
+    <cell>
+    </cell>
+    <cell>
+    </cell>
+    <cell>
+    </cell>
+    <cell>
+    </cell>
+    <cell>
+    </cell>
+    <cell>
+    </cell>
+</cell>
+<cell>
+</cell>
+<cell>
+</cell>
+<cell>
+</cell>
+<cell>
+</cell>
+<cell>
+</cell>
+<cell>
+</cell>
+        </content>
+        <footer>Created by lky</footer>
+    </div>
 </body>
 </html>
