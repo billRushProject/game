@@ -27,6 +27,7 @@ b9bb80
     width: 100%;
     height: 100vh;
     z-index: 1;
+    
 }
 
 .gameDetail{
@@ -37,7 +38,7 @@ b9bb80
     text-align: center;
     color: white;
     padding: 15px;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     width: 500px;
@@ -53,10 +54,8 @@ b9bb80
     height: 80px;
     border-radius: 50%;
 }
-
 </style>
 <script>
-
 </script>
 <body>
     <div class="bg container">
@@ -65,65 +64,194 @@ b9bb80
             <navItem onclick="clickAll()">所有</navItem>  
             <navItem onclick="clickDisplayFreeToPlay()">空手</navItem>  
             <navItem onclick="clickDisplayPokerCard()">撲克牌</navItem> 
-            <navItem onclick="clickDisplayDice()">骰仔</navItem>
+            <navItem onclick="clickDisplayOther()">其他</navItem>
         </nav>
         <content>
             <cell id="all" class="freeToPlay" onclick="getCDCard(this)">
                 <img class="album-art" src="img/2true1fake.png" alt="" >
                 <div class="cdCard gameDetail" onclick="getCDCard(this)">
                         <div id="rule">
-                            RULE
-                            <div>1. 講三件關於自己嘅事</div>
+                            RULE<hr>
+                            <br>
+                            <div>1. 講三件關於自己嘅事</div> <br>
                             <div>兩件假一件真 GAME如其名</div>
                             <div>估錯就為輸</div>
                         </div>
-                        <br>
-                        <hr> <br>
+                        <!--
+                        <br><hr><br>
                         <div >
                             <div>腦力指數:****</div>
                             <div>反應指數:</div>
                             <div>速度指數:**</div>
+                        </div>-->
+                </div>
+               
+            </cell>
+            <cell id="all" class="freeToPlay" onclick="getCDCard(this)">
+                <img class="album-art" src="img/never2.png" alt="" >
+                <div class="cdCard gameDetail" onclick="getCDCard(this)">
+                        <div id="rule">
+                            RULE<hr>
+                            <br>
+                            <div>1. 講一件自己冇做過嘅事</div> <br>
+                            <div>如果別人有做過為輸</div>
+                            <div>發言者比人周到有做過，就罰Double</div>
                         </div>
                 </div>
                
             </cell>
+            <cell id="all" class="freeToPlay" onclick="getCDCard(this)">
+                <img class="album-art" src="img/fingers.png" alt="" >
+                <div class="cdCard gameDetail" onclick="getCDCard(this)">
+                        <div id="rule">
+                            RULE<hr>
+                            <br>
+                            <div>1. 舉起五手指 </div>
+                            <div>2. 遊玩我從來沒有</div>
+                            <div>3. 輸左一次"我從來沒有"，就屈一隻手指</div>
+                            <div>4. 直到收曬所有手指為輸</div>
+                        </div>
+                </div>
+            </cell>
+            <cell id="all" class="freeToPlay" onclick="getCDCard(this)">
+                <img class="album-art" src="img/firstImpression2.png" alt="" >
+                <div class="cdCard gameDetail" onclick="getCDCard(this)">
+                        <div id="rule">
+                            RULE
+                            <hr>
+                            <br>
+                            <div>1. 舉出一個描述 </div>
+                            <div>如: 邊個最似會同呀婆搶紙皮嘅人</div> <br>
+                            <div>2. 數123 </div>
+                            <div>3. 用手指指出與描述最似嘅人</div>
+                            <div>4. 最多嘅輸</div>
+                        </div>
+                </div>
+            </cell>
             
-                <cell class="freeToPlay">
-                    <img class="album-art" src="img/never2.png" alt="">
-                </cell>
-                <cell class="freeToPlay">
-                    <img class="album-art" src="img/fingers.png" alt="">
-                </cell>
-                <cell class="freeToPlay">
-                    <img class="album-art" src="img/firstImpression2.png" alt="">
-                </cell >
-                <cell class="freeToPlay">
-                    <img class="album-art" src="img/hand.png" alt="">
-                </cell>
-                <cell  class="freeToPlay">
-                    <img class="album-art" src="img/happy.png" alt="">
-                </cell>
+            <cell id="all" class="freeToPlay" onclick="getCDCard(this)">
+                <img class="album-art" src="img/hand.png" alt="" >
+                <div class="cdCard gameDetail" onclick="getCDCard(this)">
+                        <div id="rule">
+                            RULE<hr><br>
+                            <div>1. 圍圈隨便順序疊手 </div>
+                            <div>2. 講出一個數字，決定移動多少隻手</div>
+                            <div>3. 位置最低的手，移動到最高</div>
+                            <div>4. 最後手在最底/最高(自定)嘅人為輸家</div>
+                        </div>
+                </div>
+            </cell>
                 
-                <cell class="freeToPlay">
-                    <img class="album-art" src="img/water.png" alt="">
-                </cell>
-                <cell class="pokerCard">
-                    <img class="album-art" src="img/pokerHead.png" alt="">
-                </cell>
-                <cell class="pokerCard">
-                    <img class="album-art" src="img/russian.png" alt="">
-                </cell>
-                <cell id="dice" class="dice">
-                    <img class="album-art" src="img/123456.png" alt="">
-                </cell>
-            
-            
-                <cell id="dice" class="dice">
-                    <img class="album-art" src="img/789.png" alt="">
-                </cell>
-            
-            
- 
+            <cell id="all" class="freeToPlay" onclick="getCDCard(this)">
+                <img class="album-art" src="img/happy.png" alt="" >
+                <div class="cdCard gameDetail" onclick="getCDCard(this)">
+                        <div id="rule">
+                            RULE<hr><br>
+                            <div>1. 一齊叫開心番埋黎 (唔開心要罰)</div>
+                            <div>2. 開個Topic</div>
+                            <div>3. 指個方向開始</div> <br>
+                            <div>如topic為 "cocktail"，<br> 下一個就要講任何一個cocktail名</div>
+                            
+                            <div>如果講唔到為輸</div>
+                        </div>
+                </div>
+            </cell>
+            <cell id="all" class="freeToPlay" onclick="getCDCard(this)">
+                <img class="album-art" src="img/water.png" alt="" >
+                <div class="cdCard gameDetail" onclick="getCDCard(this)">
+                        <div id="rule">
+                            RULE<hr><br>
+                            <div>1. 攞個公杯</div>
+                            <div>2. 指個方向開始</div>
+                            <div>3. 倒水</div>
+                            <div>4. 水漏出為輸</div> <br>
+                            </div>
+                </div>
+            </cell>
+            <cell id="all" class="pokerCard" onclick="getCDCard(this)">
+                <img class="album-art" src="img/pokerHead.png" alt="" >
+                <div class="cdCard gameDetail" onclick="getCDCard(this)">
+                        <div id="rule">
+                            RULE<hr><br>
+                            <div>1. 每日抽一張牌放上頭上不能觀看</div>
+                            <div>2. 開始時叫K向下/A向上為開始</div>
+                            <div>3. 指個方向開始</div>
+                            <div>4. 可以+0+1+2 之後到下一位玩家</div>
+                            <div>5. 如果叫出數字為自己頭上牌為輸</div>
+                        </div>
+                </div>
+            </cell>
+            <cell id="all" class="pokerCard" onclick="getCDCard(this)">
+                <img class="album-art" src="img/beer4ever.png" alt="" >
+                <div class="cdCard gameDetail" onclick="getCDCard(this)">
+                        <div id="rule">
+                            RULE<hr><br>
+                            <div>A 指人飲</div>
+                            <div>2 陪飲</div>
+                            <div>3 大細波</div>
+                            <div>4 開規矩</div>
+                            <div>5 圍枚</div>
+                            <div>6 開TOPIC</div>
+                            <div>7 拍柒</div>
+                            <div>8 去廁所</div>
+                            <div>9 撞機</div>
+                            <div>10 癡線佬</div>
+                            <div>J 上家飲</div>
+                            <div>Q 下家飲</div>
+                            <div>K 自己飲</div>
+                            <div>JOKER 免飲</div>
+                        </div>
+                </div>
+            </cell>
+
+            <cell id="all" class="pokerCard" onclick="getCDCard(this)">
+                <img class="album-art" src="img/russian.png" alt="" >
+                <div class="cdCard gameDetail" onclick="getCDCard(this)">
+                        <div id="rule">
+                            RULE<hr><br>
+                            (酒ONLY)
+                            <div>0.1. 6個單位shot杯 </div>
+                            <div>0.2. 隨意FILL內容物 最好為同一顏色</div>
+                            <div>1. 玩開口中 (1-100)</div>
+                            <div>2. 開口中輸家要選擇一杯作處罰</div>
+                        </div>
+                </div>
+            </cell>
+            <cell id="all" class="dice" onclick="getCDCard(this)">
+                <img class="album-art" src="img/123456.png" alt="">
+                <div class="cdCard gameDetail" onclick="getCDCard(this)">
+                        <div id="rule">
+                            RULE<hr><br>
+                            <div>0. 準備至少5顆骰子 </div>
+                            <div>1. 由一位玩家打骰</div>
+                            <div>2. 指個方向開始</div>
+                            <br>
+                            <div>數字規則</div>
+                            <div>1挑機 (自選遊戲指定一位玩家同你玩)</div>
+                            <div>2圍枚</div>
+                            <div>3指人飲</div>
+                            <div>4撞機</div>
+                            <div>5下家飲/開心番埋黎</div>
+                            <div>6放骰 <br>(自己可以keep住粒骰，但你放骰到指定位置時 <br>    大家要開始鬥快疊手最遲為輸)</div>
+                        </div>
+                </div>
+            </cell>
+            <cell id="all" class="dice" onclick="getCDCard(this)">
+                <img class="album-art" src="img/789.png" alt="">
+                <div class="cdCard gameDetail" onclick="getCDCard(this)">
+                        <div id="rule">
+                            RULE<hr><br>
+                            <div>0. 準備兩顆骰子 一個公杯</div>
+                            <div>1. 由一位玩家打骰 </div>
+                            <div>2. 指個方向開始</div>
+                            <br>
+                            <div>數字規則</div>
+                            <div>7隨意在公杯加酒</div>
+                            <div>8可以減酒/取消減酒規則</div>
+                            <div>9清公杯</div>
+                        </div>
+                </div>
+            </cell>
         </content>
         <footer>@2022 Copyright LKY</footer>
     </div>
@@ -134,7 +262,6 @@ b9bb80
             for (var i=0;i<cells.length;i+=1){
                 cells[i].style.display = 'none';
             }
-           
         }
         function clickAll(){
             var cells=document.getElementsByTagName("cell");
@@ -157,7 +284,7 @@ b9bb80
                 cells[i].style.display = 'inline-block';
             }
         }
-        function clickDisplayDice(){
+        function clickDisplayOther(){
             displayNoneAll()
             var cells=document.getElementsByClassName("dice");
             for (var i=0;i<cells.length;i+=1){
@@ -173,8 +300,6 @@ b9bb80
             } else {
                 childNodes[1].style.display = "none";
             }
-        
-
         }
     </script>
 </body>
