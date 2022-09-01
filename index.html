@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <title>AllInGame</title>
     
 </head>
+<link rel="icon" type="image/png" href="img/logo.png"/>
 <link rel="stylesheet" href="css/design.css">
 <style>
     /*
@@ -44,6 +46,12 @@ b9bb80
 .gameDetail #rule{
     margin-top:  15% ;
 }
+.logo{
+    margin-top: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
 
 </style>
 <script>
@@ -52,6 +60,7 @@ b9bb80
 <body>
     <div class="bg container">
         <nav>
+            <img src="img/logo.png" alt="" class="logo">
             <navItem onclick="clickAll()">所有</navItem>  
             <navItem onclick="clickDisplayFreeToPlay()">空手</navItem>  
             <navItem onclick="clickDisplayPokerCard()">撲克牌</navItem> 
