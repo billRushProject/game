@@ -101,6 +101,12 @@ cell{
 }
 }
 @media only screen and (max-width: 850px) {
+    body{
+        padding:0px ;
+        margin: 0px;
+        height: 100vh;
+        font-size: 18px;
+        font-family: "Hiragino Kaku Gothic Pro","Meiryo","MS Pgothic",knowledge-reg,helvetica,arial,sans-serif;}
 content{
     max-width: 580px;
     margin: 0px auto 0px auto;
