@@ -21,7 +21,6 @@ b9bb80
 */
 .cdCard{
     position: fixed;
-    display: none;
     top: 0%;
     left: 0%;
     width: 100%;
@@ -31,7 +30,7 @@ b9bb80
 }
 
 .gameDetail{
-    background-image: url("img/cdcard.jpg");
+    background-image: url("img/cdcard2.jpg");
     background-color: #08251d;
     background-position: center;
     background-size: cover;
@@ -69,7 +68,7 @@ b9bb80
         <content>
             <cell id="all" class="freeToPlay" onclick="getCDCard(this)">
                 <img class="album-art" src="img/2true1fake.png" alt="" >
-                <div class="cdCard gameDetail" onclick="getCDCard(this)">
+                <div class="cdCard gameDetail" onclick="getCDCard(this)" style="display: none;">
                         <div id="rule">
                             RULE<hr>
                             <br>
@@ -264,6 +263,12 @@ b9bb80
                 cells[i].style.display = 'none';
             }
         }
+        function displayNoneAllCD(){
+            var cdCards=document.getElementsByClassName("cdCard");
+            for (var i=0;i<cdCards.length;i+=1){
+                cdCards[i].style.display = 'none';
+            }
+        }
         function clickAll(){
             var cells=document.getElementsByTagName("cell");
             for (var i=0;i<cells.length;i+=1){
@@ -294,6 +299,7 @@ b9bb80
         }
         function getCDCard(element){
             var childNodes = element.children;
+            console.log(childNodes[1].style.display);
             var display = childNodes[1].style.display;
 
             if (display == "none") {
@@ -302,6 +308,7 @@ b9bb80
                 childNodes[1].style.display = "none";
             }
         }
+        displayNoneAllCD()
     </script>
 </body>
 </html>
