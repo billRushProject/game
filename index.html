@@ -82,7 +82,7 @@
             for (var i = 0; i < data.length; i++) {
                 var tempContent = ``
                 for (var j = 0; j < data[i].content.length; j++) {
-                    data[i].content === "<br>" ? tempContent += `<br>` : tempContent += `<div>${data[i].content}</div>`;
+                    data[i].content[j] === "<br>" ? tempContent += `<br>` : tempContent += `<div>${data[i].content[j]}</div>`;
                 }
                 content += `<cell id="all" class="${data[i].type}" onclick="getCDCard(this)">
                                 <img class="album-art" src="${data[i].url}" alt="">
